@@ -8,8 +8,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@unocss/nuxt": "^0.47.6",
     "@vueuse/core": "^9.6.0",
     "@vueuse/nuxt": "^9.6.0",
     "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6"
   }
 }
