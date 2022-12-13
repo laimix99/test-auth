@@ -6,7 +6,7 @@ const props = defineProps({
   },
 });
 const storeMain = useStoreMain();
-console.log('юзер', storeMain.state.user);
+// console.log('юзер', storeMain.state.user);
 </script>
 
 <template>
@@ -17,7 +17,9 @@ console.log('юзер', storeMain.state.user);
       <h1>{{ new Date(post.date_created).toLocaleDateString('en-US') }}</h1>
     </div>
     <span>{{ post.description }}</span>
-    <button class="w-80px">удалить</button>
+    <button @click="storeMain.deletePost(post.id)" class="w-80px">
+      удалить
+    </button>
   </div>
 </template>
 

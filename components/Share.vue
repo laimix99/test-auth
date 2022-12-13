@@ -2,9 +2,12 @@
 const state = reactive({
   description: '',
 });
-const soreMain = useSroreMain();
+const storeMain = useStoreMain();
 function addPost() {
-  storeMain.postPost(state);
+  const payloud = {
+    description: state.description,
+  };
+  storeMain.postPost(payloud);
   state.description = '';
 }
 </script>

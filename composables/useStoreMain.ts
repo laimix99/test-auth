@@ -33,8 +33,15 @@ export const useStoreMain = defineStore('counter', () => {
     await api.ftch('/items/posts', {
       method: 'post',
       body: {
-        description: post.text,
+        description: post.description,
       },
+    });
+    getPost();
+  }
+
+  async function deletePost(id: string) {
+    await api.ftch(`/items/posts${id}`, {
+      method: 'delete',
     });
     getPost();
   }
@@ -44,5 +51,6 @@ export const useStoreMain = defineStore('counter', () => {
     getUser,
     getPost,
     postPost,
+    deletePost,
   };
 });
