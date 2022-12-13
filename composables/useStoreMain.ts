@@ -7,13 +7,10 @@ export const useStoreMain = defineStore('counter', () => {
   const user = ref({});
 
   async function getUser() {
-    const path = '/users/';
+    const path = '/users/me';
     const options = {
       method: 'get',
       // baseURL: 'https://mfvcni0p.directus.app',
-      params: {
-        limit: 1,
-      },
     };
     const { data } = await api.ftch(path, options);
     console.log(':getUsers', data);
