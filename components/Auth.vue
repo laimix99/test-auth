@@ -91,7 +91,7 @@ onMounted(() => {
   >
     <h1 class="font-bold text-black text-2xl">Directus Auth</h1>
     <div>
-      <pre class="text-black">{{ storeMain.user }}</pre>
+      <pre class="text-black">{{ storeMain.state.user }}</pre>
     </div>
     <div class="flex flex-col bg-hex-333 p-2 w-233px gap-y-2">
       <input

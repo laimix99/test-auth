@@ -29,20 +29,20 @@ export const useStoreMain = defineStore('counter', () => {
     console.log('getPost', data);
     state.posts = data;
   }
-  // async function postPost(post) {
-  //   await api.ftch('/items/posts', {
-  //     method: 'post',
-  //     body: {
-  //       description: post.text
-  //     }
-  //   })
-  //   getPost()
-  // }
+  async function postPost(post: any) {
+    await api.ftch('/items/posts', {
+      method: 'post',
+      body: {
+        description: post.text,
+      },
+    });
+    getPost();
+  }
   return {
     state,
 
     getUser,
     getPost,
-    // postPost,
+    postPost,
   };
 });
