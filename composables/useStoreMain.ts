@@ -40,9 +40,11 @@ export const useStoreMain = defineStore('counter', () => {
   }
 
   async function deletePost(id: string) {
-    await api.ftch(`/items/posts${id}`, {
+    // if (confirm('Удалить пост ?')) {
+    await api.ftch(`items/posts/${id}`, {
       method: 'delete',
     });
+    // }
     getPost();
   }
   return {
